@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/Start Screen.unity
+    guid: b2dd37957fb4344f088da22e6bff4569
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/1_CommonCancer.unity
+    guid: 060f08d965f8644fb9a7efe0f67179d7
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/2_CancerTriggered.unity
+    guid: 75a5e5e5282b14606b2d167804980bed
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/3_CancerLooksLike.unity
+    guid: ce8099de29d13452baece8bf7b54b539
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/4_Treatments.unity
+    guid: 3084e1346dec94a08b41f869dbe4ce95
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/1_what cancer.unity
+    guid: c10567b2121db43cc885e5a75fbdc310
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/2_how moles.unity
+    guid: 8ffab1830b3ea4c368fbfdb98858a98c
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/3_what scarf.unity
+    guid: 8f5429761b7724efd87d995c0a975acb
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/4_how donate.unity
+    guid: f910945255c464a2eb6649d002d35ce8
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/5_who cancer.unity
+    guid: 4f50b63d2eeee41088de06eaba1c2efb
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/List_CommonCancer/1_Basal.unity
+    guid: ef4c662339dcc4b63b39cdf2606eb0d8
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/List_CommonCancer/2_Squamous.unity
+    guid: 10b0ec2ab61854a42b3516250e70d426
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/List_The common types of skin cancer/List_CommonCancer/3_Malignant.unity
+    guid: 67656fded512b4e58980fe7adbb58a54
+  - enabled: 1
+    path: Assets/Scenes/Info Scenes/User Info.unity
+    guid: 3bd0cc53097f243358b2fa767e57c837
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/Main Menu.unity
+    guid: 0df96aff5188446c6a4d0f094a1ecfda
+  - enabled: 1
+    path: Assets/Scenes/3D Model Scenes/3DModelScene.unity
+    guid: aab5a27035db3414abefd5324fc5a798
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/Success.unity
+    guid: a017815bc39f14c6a80ecfcb9e2bdfaa
+  - enabled: 1
+    path: Assets/Scenes/Questions/Questions Scene.unity
+    guid: 60f339bf204121247ab0da1b4554e4ec
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/New User.unity
+    guid: 6df9f92d9b5fb41b0881f4f880cfeb8b
+  - enabled: 1
+    path: Assets/Scenes/Diary Scenes/Diary.unity
+    guid: c71825064909480429de922886df3191
+  - enabled: 1
+    path: Assets/Scenes/Diary Scenes/Mole Information.unity
+    guid: 202223b1d623d524c8ecdf08b508932d
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/Welcome.unity
+    guid: 021f2bec74b004313a483cca42d24a4f
+  - enabled: 1
+    path: Assets/Scenes/Photo Scenes/Camera.unity
+    guid: 7053648400ca34259b93822821fa83eb
+  - enabled: 1
+    path: Assets/Scenes/Survey Scenes/SCQOLIT Survey.unity
+    guid: cb3b73549a7e945299a14f772b7dda0a
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/Account.unity
+    guid: 0919bb4fb3b2afd45b80016487f2616b
+  - enabled: 1
+    path: Assets/Scenes/Main Screens/WelcomeHelp.unity
+    guid: 098414c606d2e466a8bc644f4d2a6df9
+  - enabled: 1
+    path: Assets/Scenes/Email/Email.unity
+    guid: c3600dee3b69b46ffa0ebb45724b6a06
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 92e23dabb4a504d41bc0dd53d102b478,
+      type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: d462157d2acaa470e99aa1eacbf50211, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: a283b1eac39a4475dbbcc048ce04edee, type: 2}
