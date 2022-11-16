@@ -1,18 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
-using System;
-using System.Net;
-using System.Net.Mail;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
- 
- /// <summary>
+using sharpPDF;
+
+/// <summary>
 /// Class that handles emails.
 /// </summary>
 public class MailClient : MonoBehaviour {
-    
 
     public TMPro.TMP_InputField email, password, targetEmail, subject, body;
     public Button send, cancel;
@@ -27,27 +21,26 @@ public class MailClient : MonoBehaviour {
     /// </summary>
     private void SendEmail()
     {
-        MailMessage mail = new MailMessage();
-         
-        mail.From = new MailAddress("rhodriowend@gmail.com");
-        mail.To.Add(targetEmail.text);
-        mail.Subject = subject.text;
-        mail.Body = body.text;
-
-        foreach (var path in EmailVariables.moleImagesToSend) {
-            mail.Attachments.Add(new Attachment(DeviceVariables.imagesPath + path));
+        NativeShare share = new NativeShare().SetSubject(subject.text).SetTitle("Mole Photos Sharing").SetText(body.text).AddEmailRecipient(targetEmail.text);
+        foreach (string path in EmailVariables.moleImagesToSend)
+        {
+            share = share.AddFile(DeviceVariables.imagesPath + path);
         }
-        
-         
-        SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
-        smtpServer.Port = 587;
-        smtpServer.Credentials = new System.Net.NetworkCredential("email", "password")as ICredentialsByHost;
-        smtpServer.EnableSsl = true;
-        ServicePointManager.ServerCertificateValidationCallback = 
-            delegate(object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) 
-        { return true; };
- 
-        smtpServer.Send(mail);
+        share.Share();
+
+        /*
+         * Dummy code for writing pdf with text file
+        string ReportPath = DeviceVariables.imagesPath + "MolesReport.pdf"; // Filename for PDF to be saved
+
+        pdfDocument myDoc = new pdfDocument("TUTORIAL", "ME");
+        pdfPage myPage = myDoc.addPage(100, 100);
+        myPage.addText("Hello World!", 200, 450, myDoc.getFontReference(sharpPDF.Enumerators.predefinedFont.csHelvetica), 10);
+        myDoc.createPDF(ReportPath);
+        myPage = null;
+        myDoc = null;
+
+        */
+
         Debug.Log("success");
         SceneManager.LoadScene("Diary");
     }
