@@ -1,4 +1,4 @@
-A project developed for the Skin Cancer Research Fund, a charity that operates from Southmead Hospital in Bristol. This app is still under development but will be deployed to allow patients to photograph and track skin lesions. These lesions pictures can then be reviewed by a doctor, to identify any potentially cancerous ones. I worked on this project with four others for about 3 months. 
+A project developed for the Skin Cancer Research Fund, a charity that operates from Southmead Hospital in Bristol. This app is still under development but will be deployed to allow patients to photograph and track skin lesions. These lesions pictures can then be reviewed by a doctor, to identify any potentially cancerous ones.
 
 This smartphone app features a 3D body model, allowing patients to record exactly where a specific mole is.
 
