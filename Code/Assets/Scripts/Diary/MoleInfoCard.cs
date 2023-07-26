@@ -180,6 +180,9 @@ public class MoleInfoCard : MonoBehaviour
 #if !UNITY_EDITOR
         Analytics.CustomEvent("User tried to send email");
 #endif
+        // Sets the variables to empty first to ensure they don't stack up over multiple sends
+        EmailVariables.questionnaire.Clear();
+        EmailVariables.moleImagesToSend.Clear();
         if (includeQuestionnaire)
         {
             GetQuestionnaire();
@@ -193,14 +196,54 @@ public class MoleInfoCard : MonoBehaviour
 
         foreach (var btn in lc.GetSelectedButtons())
         {
-            EmailVariables.moleImagesToSend.Add(btn.GetPath());
+            EmailVariables.moleImagesToSend.Add((btn.GetPath(), btn.GetDate()));
         }
+        EmailVariables.moleImagesToSend.Reverse();
+
+        EmailVariables.moleName = moleName.text;
+        EmailVariables.farMolePhotoPath = farShotPath;
+        setUserNameAndDob();
 
         SceneManager.LoadScene("Email");
     }
 
     void GoBack() {
         SceneManager.LoadScene("Diary");
+    }
+
+    /// <summary>
+    /// Sets name field for email variables by retrieveing name from database
+    /// </summary>
+    void setUserNameAndDob()
+    {
+        EmailVariables.patientName = "";
+        EmailVariables.patientDob = "";
+        string firstName = "";
+        string lastName = "";
+        string age = "";
+        using (var connection = new SqliteConnection(DeviceVariables.database))
+        {
+            connection.Open();
+
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM account;";
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        firstName += reader["firstname"];
+                        lastName += reader["surname"];
+                        age += reader["age"];
+                        EmailVariables.gender = reader["gender"].ToString();
+                    }
+                    reader.Close();
+                }
+            }
+            connection.Close();
+        }
+        EmailVariables.patientName = firstName + " " + lastName;
+        EmailVariables.patientDob = age;
     }
 
 }

@@ -6,6 +6,12 @@ using UnityEngine;
 /// </summary>
 public class EmailVariables : MonoBehaviour
 {
-    public static List<string> moleImagesToSend = new List<string>();
+    public static string patientName = "";
+    public static string patientDob = "";
+    public static string patientEmail = "";
+    public static string moleName = "";
+    public static string farMolePhotoPath = "";
+    public static string gender = "";
+    public static List<(string photoPath, string dateTaken)> moleImagesToSend = new List<(string, string)>();
     public static List<(string question, string answer)> questionnaire = new List<(string, string)>();
 }
