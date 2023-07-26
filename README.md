@@ -1,4 +1,15 @@
-A project developed for the Skin Cancer Research Fund, a charity that operates from Southmead Hospital in Bristol. This app is still under development but will be deployed to allow patients to photograph and track skin lesions. These lesions pictures can then be reviewed by a doctor, to identify any potential cancerous ones. I worked on this project with four others for about 3 months. Please view the project readme below:
+A project developed for the Skin Cancer Research Fund, a charity that operates from Southmead Hospital in Bristol. This app is still under development but will be deployed to allow patients to photograph and track skin lesions. These lesions pictures can then be reviewed by a doctor, to identify any potentially cancerous ones. I worked on this project with four others for about 3 months. 
+
+This smartphone app features a 3D body model, allowing patients to record exactly where a specific mole is.
+
+![Body Map](https://github.com/philipmortimer/Mole-Tracker-ScaRF/assets/64362945/c2c21083-d684-44ef-9253-c718e0e7911f)
+
+Patients are prompted to photograph these moles periodically. The moles can then be sent via email to a doctor, who can check to see whether they are cancerous.
+
+![Example Email](https://github.com/philipmortimer/Mole-Tracker-ScaRF/assets/64362945/63c92161-a492-4df8-b885-6e1d19f139f9)
+
+
+Please view the project readme below:
 
 # SkinCancer
 
